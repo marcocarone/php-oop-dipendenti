@@ -4,7 +4,7 @@ trait Ferie
 {
 
   protected $giorniFerieMaturati;
-  public $giorniFerieUtilizzati;
+  protected $giorniFerieUtilizzati;
 
 
   public function calcolagiorniFerieRimanenti(){

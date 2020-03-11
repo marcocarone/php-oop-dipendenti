@@ -14,7 +14,7 @@ require_once __DIR__ . "/../traits/Ferie.php";
 
       public function __construct($_id, $_nome, $_cognome, $_cf, $_ruolo)
       {
-          if (empty($_id) || !is_int($_id)) {
+          if (empty($_id) && !is_int($_id)) {
               throw new Exception('Non è un numero');
           } else {
               $this->id = $_id;

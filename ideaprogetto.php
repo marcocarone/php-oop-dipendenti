@@ -6,6 +6,7 @@ Dipendente
   protected cognome
   protected cf
   protected ruolo
-  protected    indirizzo
+  protected indirizzo
   protected stipendio
   protected giorniFerie
+  public function __construct(id, nome, cognome, cf, ruolo)

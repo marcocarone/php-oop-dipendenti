@@ -8,8 +8,8 @@ require_once __DIR__ . "/../traits/Ferie.php";
       protected $cognome;
       protected $cf;
       protected $ruolo;
-      public $indirizzo;
-      public $stipendio;
+      protected $indirizzo;
+      protected $stipendio;
       use Ferie;
 
       public function __construct($_id, $_nome, $_cognome, $_cf, $_ruolo)
@@ -41,4 +41,36 @@ require_once __DIR__ . "/../traits/Ferie.php";
           }
 
       }
+
+      public function setIndirizzo($indirizzo)
+      {
+        if (empty($indirizzo)) {
+            throw new Exception('Campo non è settato');
+        } else {
+            $this->indirizzo = $indirizzo;
+        }
+      }
+
+      public function getIndirizzo()
+      {
+        return $this->indirizzo;
+      }
+
+
+      public function setStipendio($stipendio)
+      {
+        if (empty($stipendio)) {
+            throw new Exception('Campo non è settato');
+        } else {
+            $this->stipendio = $stipendio;
+        }
+      }
+      public function getStipendio()
+      {
+        return $this->stipendio;
+      }
+
+    
+
   }
+?>
